@@ -1,0 +1,20 @@
+<article class="post-card">
+  {% assign post = include.post %}
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <p class="post-meta">
+    {{ post.date | date: "%d %b %Y" }} ·
+    {% assign words = post.content | number_of_words %}
+    {% if words < 200 %}
+      1 min read
+    {% else %}
+      {{ words | divided_by: 200 | plus: 1 }} min read
+    {% endif %}
+  </p>
+  <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+  <ul class="tag-list" aria-label="Categories">
+    {% for category in post.categories limit:2 %}
+      {% assign category_slug = category | slugify %}
+      <li><a class="tag" href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ category }}</a></li>
+    {% endfor %}
+  </ul>
+</article>

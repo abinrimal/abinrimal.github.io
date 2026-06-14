@@ -1,0 +1,12 @@
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+
+<ul>
+  {% for category in site.categories %}
+    {% assign category_slug = category[0] | slugify %}
+    <li><a href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ category[0] }}</a> ({{ category[1].size }})</li>
+  {% endfor %}
+</ul>

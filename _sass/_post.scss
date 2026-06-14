@@ -1,0 +1,12 @@
+.prose pre, .prose .highlight pre {
+  background: var(--color-base);
+  color: #d7e1ea;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.prose .highlight .s,
+.prose .highlight .s1,
+.prose .highlight .s2 {
+  color: var(--color-accent);
+}
+.prose time { color: var(--color-tertiary); }

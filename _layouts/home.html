@@ -1,0 +1,75 @@
+---
+layout: default
+---
+<section class="hero section">
+  <div class="container">
+    <div class="scanline"></div>
+    <h1>ABIN RIMAL</h1>
+    <p class="lead">Cybersecurity Researcher · Software Engineer · Sydney, AU</p>
+    <p class="hero-punch">I build systems that detect threats. I also build the web infrastructure those threats target.</p>
+    <p>MIT Cybersecurity graduate. 7+ years shipping production software.<br>ACS-verified. Full working rights in Australia.</p>
+    <div class="button-row">
+      <a class="button" href="{{ '/blog/' | relative_url }}">Read the blog</a>
+      <a class="button button-secondary" href="{{ '/#projects' | relative_url }}">View my work</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Recently Written</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:5 %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>About me</h2>
+    <p>I'm Abin Rimal, a Sydney-based cybersecurity graduate and software engineer with 7+ years of hands-on delivery across cloud infrastructure, secure systems, and full-stack product development. My work spans threat detection research, production-grade web engineering, and security-focused operations across AWS and Linux environments. I hold an ACS Skills Assessment and full Australian working rights, and I currently work across ICT security support, freelance Shopify development, and volunteer web engineering for Australian Refugee Volunteers Inc. <a href="{{ '/about/' | relative_url }}">Read the full profile.</a></p>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <div class="scanline"></div>
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <article class="project-card">
+        <h3>Hybrid Honeypot System</h3>
+        <ul class="tag-list">
+          <li><span class="tag">Python</span></li><li><span class="tag">Snort IDS</span></li><li><span class="tag">Cowrie</span></li><li><span class="tag">Scikit-learn</span></li><li><span class="tag">FastAPI</span></li><li><span class="tag">PostgreSQL</span></li><li><span class="tag">Linux</span></li>
+        </ul>
+        <p>Multi-sensor threat detection platform integrating SSH/web honeypots, network IDS, and a Random Forest ML classifier for anomaly detection. Includes a real-time FastAPI monitoring dashboard visualising attack events from simulated DDoS, brute-force, and reconnaissance scenarios.</p>
+        <a href="https://github.com/abinrimal" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="project-card">
+        <h3>EDUConnect — Microservices Platform</h3>
+        <ul class="tag-list">
+          <li><span class="tag">FastAPI</span></li><li><span class="tag">Next.js</span></li><li><span class="tag">Docker Compose</span></li><li><span class="tag">AWS EC2/S3/IAM</span></li><li><span class="tag">GitHub Actions</span></li><li><span class="tag">PostgreSQL</span></li>
+        </ul>
+        <p>Cloud-native microservices learning platform built from scratch with containerised services, automated CI/CD deployment, and least-privilege AWS IAM configuration throughout.</p>
+        <a href="https://github.com/abinrimal" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="project-card">
+        <h3>Australian Refugee Volunteers — Web Platform</h3>
+        <ul class="tag-list">
+          <li><span class="tag">KeystoneJS</span></li><li><span class="tag">Next.js</span></li><li><span class="tag">PostgreSQL</span></li>
+        </ul>
+        <p>Open-source web platform for humanitarian service delivery, built as a volunteer contributor. Demonstrates modern headless CMS architecture and community-driven development.</p>
+        <a href="https://australianrefugeevolunteers.org.au" target="_blank" rel="noopener">View live site</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section connect-strip">
+  <div class="container connect-row" aria-label="Connect links">
+    <a href="https://www.linkedin.com/in/abinrimal" target="_blank" rel="noopener">🔗 LinkedIn</a>
+    <a href="https://github.com/abinrimal" target="_blank" rel="noopener">💻 GitHub</a>
+    <a href="mailto:abinrimal7@gmail.com">✉️ Email</a>
+  </div>
+</section>

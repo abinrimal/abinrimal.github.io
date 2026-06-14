@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  background: var(--color-surface);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+a { color: var(--color-base); text-decoration-color: rgba(31, 191, 191, 0.35); }
+a:hover { color: var(--color-accent); }
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.2; color: var(--color-base); }
+code, pre, .tag { font-family: var(--font-mono); }

@@ -1,0 +1,37 @@
+title: Abin Rimal
+tagline: "Cybersecurity Researcher · Software Engineer · Sydney, AU"
+description: "Writing about cybersecurity, software engineering, DevOps, and the Australian tech market."
+author:
+  name: Abin Rimal
+  email: abinrimal7@gmail.com
+  linkedin: https://www.linkedin.com/in/abinrimal
+  github: https://github.com/abinrimal
+
+url: "https://abinrimal.github.io"
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+theme: null
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+permalink: /blog/:year/:month/:slug/
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
