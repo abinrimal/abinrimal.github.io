@@ -1,0 +1,32 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<div class="blog-layout">
+  <aside>
+    <h2>Categories</h2>
+    <ul class="tag-list">
+      {% for category in site.categories %}
+        {% assign category_slug = category[0] | slugify %}
+        <li><a class="tag" href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ category[0] }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+  <section>
+    {% for post in paginator.posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+
+    <nav class="pagination" aria-label="Pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">Newer posts</a>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Older posts</a>
+      {% endif %}
+    </nav>
+  </section>
+</div>
