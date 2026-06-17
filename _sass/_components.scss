@@ -69,3 +69,22 @@
   color: #354d62;
   font-size: .95rem;
 }
+
+.contact-alert {
+  margin: 0 0 1rem;
+  padding: .65rem .75rem;
+  border-left: 3px solid var(--color-accent);
+  background: rgba(31, 191, 191, 0.12);
+  color: #1c2b3a;
+}
+
+.recaptcha-wrap {
+  display: grid;
+  gap: .45rem;
+}
+
+.recaptcha-error {
+  margin: 0;
+  color: #a1271b;
+  font-size: .9rem;
+}
