@@ -7,6 +7,8 @@ author:
   linkedin: https://www.linkedin.com/in/abinrimal
   github: https://github.com/abinrimal
 
+recaptcha_site_key: "YOUR_RECAPTCHA_SITE_KEY"
+
 url: "https://abinrimal.github.io"
 baseurl: ""
 
