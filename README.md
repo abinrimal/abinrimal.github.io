@@ -12,3 +12,9 @@
 3. Write in Markdown
 4. git add, commit, push
 5. Done — home page updates automatically
+
+## Enabling comments on blog posts
+1. Create a Disqus site and copy your shortname
+2. Set `disqus_shortname` in `/home/runner/work/abinrimal.github.io/abinrimal.github.io/_config.yml`
+3. Comments render automatically on all posts
+4. Add `comments: false` in a post front matter to disable comments for that post
