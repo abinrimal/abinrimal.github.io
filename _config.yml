@@ -8,7 +8,7 @@ author:
   github: https://github.com/abinrimal
 
 recaptcha_site_key: "YOUR_RECAPTCHA_SITE_KEY"
-disqus_shortname: ""
+disqus_shortname: "abinrimal"
 
 url: "https://abinrimal.github.io"
 baseurl: ""
