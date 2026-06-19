@@ -1,75 +1,128 @@
 ---
 layout: default
 ---
-<section class="hero section">
+<section class="hero section section-tight">
   <div class="container">
-    <div class="scanline"></div>
-    <h1>ABIN RIMAL</h1>
-    <p class="lead">Cybersecurity Researcher · Software Engineer · Sydney, AU</p>
-    <p class="hero-punch">I build systems that detect threats. I also build the web infrastructure those threats target.</p>
-    <p>MIT Cybersecurity graduate. 7+ years shipping production software.<br>ACS-verified. Full working rights in Australia.</p>
+    <p class="kicker">Cybersecurity &amp; Backend Engineer</p>
+    <h1>Abin Rimal</h1>
+    <p class="lead">Python · FastAPI · AWS · Docker · PostgreSQL</p>
+    <p class="hero-punch">I design and build secure, scalable backend systems and cloud infrastructure with a focus on cybersecurity and production reliability.</p>
+    <p class="credibility-line">ACS Skills Assessment Verified · Based in Sydney, AU</p>
     <div class="button-row">
-      <a class="button" href="{{ '/blog/' | relative_url }}">Read the blog</a>
-      <a class="button button-secondary" href="{{ '/#projects' | relative_url }}">View my work</a>
+      <a class="button button-primary" href="{{ '/#featured-projects' | relative_url }}">View Projects</a>
+      <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Read Blog</a>
+    </div>
+    <div class="hero-links" aria-label="Primary profile links">
+      <a href="https://github.com/abinrimal" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/abinrimal" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:abinrimal7@gmail.com">Email</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h2>Recently Written</h2>
-    <div class="post-grid">
-      {% for post in site.posts limit:5 %}
-        {% include post-card.html post=post %}
-      {% endfor %}
+    <h2>Focus Areas</h2>
+    <div class="focus-grid">
+      <article class="feature-card">
+        <h3>Secure Backend Systems</h3>
+        <p>I build API-first backend services with FastAPI and Python, emphasizing security controls, clean architecture, and reliable data flows.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Cloud &amp; DevOps</h3>
+        <p>I deploy and operate containerized services on AWS with Docker and CI/CD pipelines designed for repeatable, production-safe releases.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Cybersecurity Engineering</h3>
+        <p>I develop defensive systems using honeypots, IDS tooling, and anomaly detection workflows to improve threat visibility and response.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section id="featured-projects" class="section">
   <div class="container">
-    <h2>About me</h2>
-    <p>I'm Abin Rimal, a Sydney-based cybersecurity graduate and software engineer with 7+ years of hands-on delivery across cloud infrastructure, secure systems, and full-stack product development. My work spans threat detection research, production-grade web engineering, and security-focused operations across AWS and Linux environments. I hold an ACS Skills Assessment and full Australian working rights, and I currently work across ICT security support, freelance Shopify development, and volunteer web engineering for Australian Refugee Volunteers Inc. <a href="{{ '/about/' | relative_url }}">Read the full profile.</a></p>
-  </div>
-</section>
-
-<section id="projects" class="section">
-  <div class="container">
-    <div class="scanline"></div>
     <h2>Featured Projects</h2>
     <div class="project-grid">
       <article class="project-card">
         <h3>Hybrid Honeypot System</h3>
         <ul class="tag-list">
-          <li><span class="tag">Python</span></li><li><span class="tag">Snort IDS</span></li><li><span class="tag">Cowrie</span></li><li><span class="tag">Scikit-learn</span></li><li><span class="tag">FastAPI</span></li><li><span class="tag">PostgreSQL</span></li><li><span class="tag">Linux</span></li>
+          <li><span class="tag">FastAPI</span></li><li><span class="tag">Python</span></li><li><span class="tag">Snort IDS</span></li><li><span class="tag">Cowrie</span></li><li><span class="tag">Scikit-learn</span></li><li><span class="tag">PostgreSQL</span></li>
         </ul>
-        <p>Multi-sensor threat detection platform integrating SSH/web honeypots, network IDS, and a Random Forest ML classifier for anomaly detection. Includes a real-time FastAPI monitoring dashboard visualising attack events from simulated DDoS, brute-force, and reconnaissance scenarios.</p>
-        <a href="https://github.com/abinrimal" target="_blank" rel="noopener">View on GitHub</a>
+        <p>Multi-sensor honeypot platform combining SSH and web traps, Snort IDS, machine-learning anomaly detection, and a FastAPI real-time dashboard.</p>
+        <h4>What this demonstrates</h4>
+        <ul class="project-points">
+          <li>Cybersecurity engineering</li>
+          <li>Threat detection systems</li>
+          <li>Machine learning applied to security</li>
+          <li>Backend system architecture</li>
+        </ul>
+        <a class="button project-link" href="https://github.com/abinrimal" target="_blank" rel="noopener">GitHub</a>
       </article>
       <article class="project-card">
-        <h3>EDUConnect — Microservices Platform</h3>
+        <h3>The Connect Education — Microservices Platform</h3>
         <ul class="tag-list">
-          <li><span class="tag">FastAPI</span></li><li><span class="tag">Next.js</span></li><li><span class="tag">Docker Compose</span></li><li><span class="tag">AWS EC2/S3/IAM</span></li><li><span class="tag">GitHub Actions</span></li><li><span class="tag">PostgreSQL</span></li>
+          <li><span class="tag">FastAPI</span></li><li><span class="tag">PostgreSQL</span></li><li><span class="tag">Docker Compose</span></li><li><span class="tag">AWS</span></li><li><span class="tag">GitHub Actions</span></li>
         </ul>
-        <p>Cloud-native microservices learning platform built from scratch with containerised services, automated CI/CD deployment, and least-privilege AWS IAM configuration throughout.</p>
-        <a href="https://github.com/abinrimal" target="_blank" rel="noopener">View on GitHub</a>
+        <p>Education platform designed as FastAPI microservices with production-ready PostgreSQL schemas, containerized deployment, and AWS CI/CD pipelines.</p>
+        <h4>What this demonstrates</h4>
+        <ul class="project-points">
+          <li>Distributed systems design</li>
+          <li>Cloud deployment (AWS)</li>
+          <li>Microservices architecture</li>
+          <li>Production-grade backend engineering</li>
+        </ul>
+        <a class="button project-link" href="https://github.com/abinrimal" target="_blank" rel="noopener">GitHub</a>
       </article>
       <article class="project-card">
-        <h3>Australian Refugee Volunteers — Web Platform</h3>
+        <h3>Open Source / Volunteer Web Platform</h3>
         <ul class="tag-list">
-          <li><span class="tag">KeystoneJS</span></li><li><span class="tag">Next.js</span></li><li><span class="tag">PostgreSQL</span></li>
+          <li><span class="tag">Next.js</span></li><li><span class="tag">PostgreSQL</span></li><li><span class="tag">Headless CMS</span></li>
         </ul>
-        <p>Open-source web platform for humanitarian service delivery, built as a volunteer contributor. Demonstrates modern headless CMS architecture and community-driven development.</p>
-        <a href="https://australianrefugeevolunteers.org.au" target="_blank" rel="noopener">View live site</a>
+        <p>Contribution to a production volunteer platform built with Next.js, PostgreSQL, and a headless CMS for real-world service delivery.</p>
+        <h4>What this demonstrates</h4>
+        <ul class="project-points">
+          <li>Full-stack collaboration</li>
+          <li>Production development experience</li>
+          <li>Real-world deployment</li>
+        </ul>
+        <a class="button project-link" href="https://australianrefugeevolunteers.org.au" target="_blank" rel="noopener">Live Site</a>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section connect-strip">
-  <div class="container connect-row" aria-label="Connect links">
-    <a href="https://www.linkedin.com/in/abinrimal" target="_blank" rel="noopener">🔗 LinkedIn</a>
-    <a href="https://github.com/abinrimal" target="_blank" rel="noopener">💻 GitHub</a>
-    <a href="mailto:abinrimal7@gmail.com">✉️ Email</a>
+<section class="section">
+  <div class="container">
+    <h2>Technical Writing</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="post-card">
+        {% case forloop.index %}
+          {% when 1 %}
+            <p class="post-angle">System design breakdown</p>
+            <p class="post-summary">Architecture decisions, component choices, and implementation trade-offs from production-oriented backend builds.</p>
+          {% when 2 %}
+            <p class="post-angle">Cybersecurity insight</p>
+            <p class="post-summary">Practical threat analysis and defensive engineering lessons from hands-on security experimentation.</p>
+          {% else %}
+            <p class="post-angle">Engineering lesson learned</p>
+            <p class="post-summary">Delivery-focused reflections on reliability, automation, and building software that holds up in production.</p>
+        {% endcase %}
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    <h2>About me</h2>
+    <p class="about-preview">I’m a Sydney-based engineer focused on backend platforms, cloud operations, and cybersecurity engineering.</p>
+    <p class="about-preview">My work combines Python and FastAPI development with AWS infrastructure and security-first system design.</p>
+    <p class="about-preview">I build and operate production services with attention to threat resilience, reliability, and maintainability.</p>
+    <p class="about-preview"><a href="{{ '/about/' | relative_url }}">Read the full About page.</a></p>
   </div>
 </section>
