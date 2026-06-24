@@ -6,9 +6,6 @@ permalink: /contact/
 
 Use the form below to get in touch.
 
-<p class="contact-alert">
-  If messages are not reaching Gmail, confirm the FormSubmit activation email once for <strong>abinrimal7@gmail.com</strong> and check Spam/Promotions.
-</p>
 
 <form class="contact-form" action="https://formsubmit.co/abinrimal7@gmail.com" method="POST">
   <input type="hidden" name="_subject" value="New message from abinrimal.github.io contact form">
@@ -29,7 +26,7 @@ Use the form below to get in touch.
   <textarea id="contact-message" name="message" rows="7" required></textarea>
 
   <div class="recaptcha-wrap">
-    <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key | default: 'YOUR_RECAPTCHA_SITE_KEY' }}"></div>
+    <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key | default: '6LdAgyYtAAAAAOBPb-h2H1luDJj35gD-1MJ-HH_7' }}"></div>
     <p class="recaptcha-error" hidden>Please complete the reCAPTCHA verification before sending.</p>
   </div>
 
