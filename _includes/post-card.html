@@ -1,20 +1,38 @@
-<article class="post-card">
+<article class="post-card" aria-label="{{ include.post.title }}">
   {% assign post = include.post %}
-  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-  <p class="post-meta">
-    {{ post.date | date: "%d %b %Y" }} ·
-    {% assign words = post.content | number_of_words %}
-    {% if words < 200 %}
-      1 min read
-    {% else %}
-      {{ words | divided_by: 200 | plus: 1 }} min read
+
+  {% if post.categories.size > 0 %}
+    {% assign primary_category = post.categories | first %}
+    <p class="post-card__angle">{{ primary_category }}</p>
+  {% endif %}
+
+  <h3 class="post-card__title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h3>
+
+  <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+
+  <footer class="post-card__footer">
+    <p class="post-card__meta">
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%d %b %Y" }}</time>
+      <span class="post-card__dot" aria-hidden="true">·</span>
+      {% assign words = post.content | number_of_words %}
+      {% if words < 200 %}
+        <span>1 min read</span>
+      {% else %}
+        <span>{{ words | divided_by: 200 | plus: 1 }} min read</span>
+      {% endif %}
+    </p>
+
+    {% if post.categories.size > 1 %}
+      <ul class="tag-list" aria-label="Categories">
+        {% for category in post.categories limit:2 %}
+          {% assign category_slug = category | slugify %}
+          <li>
+            <a class="tag" href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ category }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     {% endif %}
-  </p>
-  <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
-  <ul class="tag-list" aria-label="Categories">
-    {% for category in post.categories limit:2 %}
-      {% assign category_slug = category | slugify %}
-      <li><a class="tag" href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ category }}</a></li>
-    {% endfor %}
-  </ul>
+  </footer>
 </article>
