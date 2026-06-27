@@ -181,7 +181,7 @@ section + section {
   display: flex;
   flex-wrap: wrap;
   gap: .6rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .hero-social {
@@ -323,7 +323,6 @@ section + section {
 // PROSE & MISC
 // ─────────────────────────────────────────────
 
-.prose { max-width: 680px; }
 .post-layout { margin: 0 auto; }
 .connect-row { display: flex; gap: 1rem; flex-wrap: wrap; }
 .connect-strip { background: rgba(28, 43, 58, 0.06); }
