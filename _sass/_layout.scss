@@ -1,16 +1,72 @@
+// ─────────────────────────────────────────────
+// CONTAINER
+// ─────────────────────────────────────────────
+
 .container { width: min(1120px, 92%); margin: 0 auto; }
-.section { padding: 4rem 0; }
+
+
+// ─────────────────────────────────────────────
+// SECTION SPACING
+// ─────────────────────────────────────────────
+
+.section       { padding: 4rem 0; }
 .section-tight { padding: 3rem 0; }
+
+// Named section classes used in the redesigned homepage.
+.stack-section,
+.focus-section,
+.projects-section,
+.timeline-section,
+.areas-section,
+.writing-section,
+.credentials-section,
+.about-section {
+  padding: 4rem 0;
+}
+
+.cta-section {
+  padding: 5rem 0;
+}
+
+// Subtle divider between every adjacent section
+section + section {
+  border-top: 1px solid rgba(16, 32, 46, 0.08);
+}
+
+// Eyebrow sits tight to its heading;
+// section padding gives air above it.
+.section-eyebrow {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.section-heading {
+  margin-top: .35rem;
+  margin-bottom: 2rem;
+}
+
+
+// ─────────────────────────────────────────────
+// SITE HEADER
+// ─────────────────────────────────────────────
+
 .site-header { background: var(--color-base); color: var(--color-surface); }
 .nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
 .site-title, .site-nav a { color: var(--color-surface); text-decoration: none; }
 .site-nav { display: flex; gap: 1rem; }
 
+
+// ─────────────────────────────────────────────
+// HERO
+// ─────────────────────────────────────────────
+
 .hero {
+  padding: 5rem 0 4rem;
   background: linear-gradient(180deg, rgba(31, 191, 191, 0.08), rgba(31, 191, 191, 0));
   border-bottom: 1px solid rgba(16, 32, 46, 0.1);
 }
 
+// Legacy hero elements (kept for backward compat)
 .hero .kicker {
   margin: 0 0 .75rem;
   font-size: .86rem;
@@ -19,53 +75,303 @@
   color: #41596f;
   font-family: var(--font-mono);
 }
-
 .hero h1 {
   margin: 0;
   font-size: clamp(2rem, 5vw, 3rem);
 }
-
 .hero .lead {
   margin: .75rem 0;
   font-size: 1rem;
   color: #354d62;
 }
-
 .hero-punch {
   margin: 0;
   max-width: 70ch;
   font-size: 1.12rem;
   line-height: 1.6;
 }
-
 .credibility-line {
   margin: 1rem 0 0;
   color: #23374b;
   font-weight: 600;
 }
-
 .hero-links {
   margin-top: .9rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
-
 .hero-links a {
   color: #22384d;
   text-decoration: none;
   font-weight: 600;
 }
 
-.site-footer { background: var(--color-base); color: var(--color-surface); margin-top: 3rem; }
-.footer-wrap { padding: 1.5rem 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+// Redesigned hero elements
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--color-accent);
+  margin: 0 0 1.25rem;
+}
+
+.kicker-dot { opacity: 0.35; }
+
+.hero-headline {
+  margin: 0 0 .75rem;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--color-base);
+}
+
+.hero-name {
+  margin: 0 0 .5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-base);
+}
+
+.hero-stack {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: .88rem;
+  color: #41596f;
+}
+
+.hero-body {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 62ch;
+  color: var(--color-text);
+}
+
+.hero-signals {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1.5rem;
+}
+
+.hero-signals li {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .88rem;
+  color: var(--color-text);
+}
+
+.signal-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: 2rem;
+}
+
+.hero-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .5rem;
+}
+
+.hero-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: .3rem .5rem;
+  border-radius: .35rem;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.hero-social a:hover {
+  color: var(--color-base);
+  background: rgba(16, 32, 46, 0.06);
+}
+
+
+// ─────────────────────────────────────────────
+// SITE FOOTER
+// ─────────────────────────────────────────────
+
+.site-footer {
+  background: var(--color-base);
+  color: var(--color-surface);
+  margin-top: 3rem;
+}
+
+.footer-wrap {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
 .footer-wrap a { color: var(--color-surface); }
+
+.footer-links,
+.footer-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+  justify-content: center;
+}
+
+.footer-links a,
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .88rem;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  padding: .3rem .4rem;
+  border-radius: .35rem;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--color-surface);
+  background: rgba(255,255,255,0.08);
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: .82rem;
+  color: rgba(255,255,255,0.45);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .2rem .4rem;
+  justify-content: center;
+}
+
+.footer-dot { opacity: 0.35; }
+
+
+// ─────────────────────────────────────────────
+// CTA SECTION
+// ─────────────────────────────────────────────
+
+.cta-heading {
+  margin: .25rem 0 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.cta-body {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 50ch;
+  color: var(--color-text);
+}
+
+.cta-disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .75rem;
+  margin-bottom: 2rem;
+}
+
+.cta-disciplines span {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--color-accent);
+}
+
+.cta-disciplines span::before {
+  content: '→ ';
+  opacity: 0.5;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+
+// ─────────────────────────────────────────────
+// PROSE & MISC
+// ─────────────────────────────────────────────
+
 .prose { max-width: 680px; }
 .post-layout { margin: 0 auto; }
 .connect-row { display: flex; gap: 1rem; flex-wrap: wrap; }
 .connect-strip { background: rgba(28, 43, 58, 0.06); }
 
+hr {
+  border: none;
+  border-top: 1px solid rgba(16, 32, 46, 0.1);
+  margin-block: 3rem;
+}
+
+
+// ─────────────────────────────────────────────
+// RESPONSIVE
+// ─────────────────────────────────────────────
+
+@media (max-width: 900px) {
+  .stack-section,
+  .focus-section,
+  .projects-section,
+  .timeline-section,
+  .areas-section,
+  .writing-section,
+  .credentials-section,
+  .about-section {
+    padding: 3rem 0;
+  }
+
+  .cta-section { padding: 3.5rem 0; }
+  .hero        { padding: 3.5rem 0 3rem; }
+}
+
 @media (max-width: 720px) {
   .nav-wrap { flex-direction: column; align-items: flex-start; gap: .5rem; }
-  .section { padding: 3rem 0; }
+  .section   { padding: 3rem 0; }
+
+  .stack-section,
+  .focus-section,
+  .projects-section,
+  .timeline-section,
+  .areas-section,
+  .writing-section,
+  .credentials-section,
+  .about-section {
+    padding: 2.5rem 0;
+  }
+
+  .cta-section { padding: 3rem 0; }
+  .hero        { padding: 3rem 0 2.5rem; }
+
+  hr { margin-block: 2rem; }
 }
