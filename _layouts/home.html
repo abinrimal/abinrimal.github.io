@@ -105,6 +105,37 @@ layout: default
 </section>
 
 <!-- ═══════════════════════════════════════════
+     TECHNICAL WRITING
+════════════════════════════════════════════ -->
+<section class="writing-section" aria-label="Technical writing">
+  <div class="container">
+    <p class="section-eyebrow">Recent Blogs</p>
+    <h2 class="section-heading">Technical Writings</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="post-card {% if forloop.first %}post-card--featured{% endif %}" aria-label="{{ post.title }}">
+        {% case forloop.index %}
+          {% when 1 %}
+            <p class="post-card__angle">System design breakdown</p>
+            <p class="post-card__summary">Architecture decisions, component choices, and implementation trade-offs from production-oriented backend builds.</p>
+          {% when 2 %}
+            <p class="post-card__angle">Cybersecurity insight</p>
+            <p class="post-card__summary">Practical threat analysis and defensive engineering lessons from hands-on security experimentation.</p>
+          {% else %}
+            <p class="post-card__angle">Engineering lesson learned</p>
+            <p class="post-card__summary">Delivery-focused reflections on reliability, automation, and building software that holds up in production.</p>
+        {% endcase %}
+        <h3 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-card__meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time></p>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="writing-footer">
+      <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">All Articles →</a>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════
      FEATURED PROJECTS
 ════════════════════════════════════════════ -->
 <section id="featured-projects" class="projects-section" aria-label="Featured projects">
@@ -306,37 +337,7 @@ layout: default
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     TECHNICAL WRITING
-════════════════════════════════════════════ -->
-<section class="writing-section" aria-label="Technical writing">
-  <div class="container">
-    <p class="section-eyebrow">Recent Blogs</p>
-    <h2 class="section-heading">Technical Writings</h2>
-    <div class="post-grid">
-      {% for post in site.posts limit:3 %}
-      <article class="post-card {% if forloop.first %}post-card--featured{% endif %}" aria-label="{{ post.title }}">
-        {% case forloop.index %}
-          {% when 1 %}
-            <p class="post-card__angle">System design breakdown</p>
-            <p class="post-card__summary">Architecture decisions, component choices, and implementation trade-offs from production-oriented backend builds.</p>
-          {% when 2 %}
-            <p class="post-card__angle">Cybersecurity insight</p>
-            <p class="post-card__summary">Practical threat analysis and defensive engineering lessons from hands-on security experimentation.</p>
-          {% else %}
-            <p class="post-card__angle">Engineering lesson learned</p>
-            <p class="post-card__summary">Delivery-focused reflections on reliability, automation, and building software that holds up in production.</p>
-        {% endcase %}
-        <h3 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p class="post-card__meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time></p>
-      </article>
-      {% endfor %}
-    </div>
-    <div class="writing-footer">
-      <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">All Articles →</a>
-    </div>
-  </div>
-</section>
+
 
 <!-- ═══════════════════════════════════════════
      PROFESSIONAL CREDENTIALS
