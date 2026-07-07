@@ -10,8 +10,7 @@ I'm Abin Rimal — a backend and cybersecurity engineer based in Sydney, Austral
 
 I build systems that have to work: APIs that stay fast under pressure, infrastructure that deploys predictably, and security tooling that catches what gets through. That combination of backend engineering, cloud operations, and defensive systems isn't a pivot — it's the direction I've been moving for the past seven years, across two countries and several production environments.
 
-I completed a Master of Information Technology with a Cybersecurity specialisation at CIHE Australia in 2026. I hold an ACS Skills Assessment and full working rights under Graduate Visa Subclass 485.
-
+I completed a Master of Information Technology with a Cybersecurity specialisation at CIHE Australia in 2026.
 ---
 
 ## My Engineering Journey
